@@ -164,16 +164,16 @@
 
 
 
-  <meta name="description" content="我不怕千万人阻挡 只怕自己投降">
+  <meta name="description" content="I am my own God where I live.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Templeのblog">
 <meta property="og:url" content="http://yoursite.com/archives/index.html">
 <meta property="og:site_name" content="Templeのblog">
-<meta property="og:description" content="我不怕千万人阻挡 只怕自己投降">
+<meta property="og:description" content="I am my own God where I live.">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Templeのblog">
-<meta name="twitter:description" content="我不怕千万人阻挡 只怕自己投降">
+<meta name="twitter:description" content="I am my own God where I live.">
 
 
 
@@ -602,7 +602,7 @@
             </a>
             
               <p class="site-author-name" itemprop="name">Temple 古刹</p>
-              <p class="site-description motion-element" itemprop="description">我不怕千万人阻挡 只怕自己投降</p>
+              <p class="site-description motion-element" itemprop="description">I am my own God where I live.</p>
           </div>
 
           
@@ -714,7 +714,7 @@
 <script>
     var now = new Date();
     function createtime() {
-        var grt= new Date("03/09/2019 13:14:21");//此处修改你的建站时间或者网站上线时间
+        var grt= new Date("08/08/2019 00:00:00");//此处修改你的建站时间或者网站上线时间
         now.setTime(now.getTime()+250);
         days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
         hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
@@ -722,11 +722,32 @@
         mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
         seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
         snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 ";
         document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
     }
 setInterval("createtime()",250);
 </script>
+
+<!-- 新增访客统计代码 -->
+
+<div class="busuanzi-count">
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      访问用户： <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人
+    </span>
+    <div class="powered-by"></div>
+    <span class="site-uv">
+      <i class="fa fa-eye"></i>
+      访问次数： <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次
+    </span>
+    <!-- 博客字数统计 -->
+    <span class="site-pv">
+      <i class="fa fa-pencil"></i>
+      博客全站共： <span class="post-count"></span> 字
+    </span>
+</div>
+<!-- 新增访客统计代码 END-->
 
   
 
