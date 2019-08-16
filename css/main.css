@@ -1,3 +1,168 @@
+.menu .menu-item a:hover {
+  margin-top: 2px;
+  border-bottom-color: rgba(161,102,171,0);
+}
+.posts-expand .post-title {
+  font-size: 26px;
+  font-weight: 700;
+}
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
+}
+.site-title:hover,
+.post-title:hover {
+  animation: shake-it 0.5s reverse infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+/*
+@media screen and (min-width:1200px) {
+
+    body {
+    background-color: #ffffff;
+    background-image:url(/image/bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position:50% 50%; 
+    }
+
+    #footer a {
+        color:#eee;
+    }
+}
+*/
+code {
+  color: #ff7600;
+  background: #fbf7f8;
+  margin: 2px;
+}
+.highlight,
+pre {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 3px;
+}
+.highlight,
+code,
+pre {
+  border: 1px solid #d6d6d6;
+}
+img.img-topic {
+  width: 100%;
+}
+/* gitalk details */
+.gt-container .gt-header-comment {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 0;
+}
+.gt-container .gt-header-textarea {
+  min-height: 8.125em;
+  max-height: 15em;
+}
+/*
+.gt-container .gt-avatar-github {
+	display: none;
+}
+*/
+.gt-container .gt-no-init {
+  padding: 1.25em 0;
+  text-align: center;
+}
+.gt-container .gt-no-init>p {
+  text-align: center;
+}
+.gt-container .gt-meta {
+  margin: 0 0;
+  padding: 1em 0;
+  position: relative;
+  border-bottom: 0px solid #e9e9e9;
+  font-size: 1em;
+  z-index: 0;
+}
+.gt-container .gt-popup .gt-action.is--active:before {
+  content: '';
+  width: 0.25em;
+  height: 0.25em;
+  background: #6190e8;
+  position: absolute;
+  left: 0.5em;
+  top: 1.2375em;
+}
+.hider_title {
+  font-family: "Microsoft Yahei";
+  cursor: pointer;
+  color: #ef4a05;
+}
+.close:after {
+  content: "▼";
+}
+.open:after {
+  content: "▲";
+}
+@-moz-keyframes shake-it {
+  0% {
+    text-shadow: 0 0 rgba(0,255,255,0.5), 0 0 rgba(255,0,0,0.5);
+  }
+  25% {
+    text-shadow: -2px 0 rgba(0,255,255,0.5), 2px 0 rgba(255,0,0,0.5);
+  }
+  50% {
+    text-shadow: -5px 0 rgba(0,255,255,0.5), 3px 0 rgba(255,0,0,0.5);
+  }
+  100% {
+    text-shadow: 3px 0 rgba(0,255,255,0.5), 5px 0 rgba(255,0,0,0.5);
+  }
+}
+@-webkit-keyframes shake-it {
+  0% {
+    text-shadow: 0 0 rgba(0,255,255,0.5), 0 0 rgba(255,0,0,0.5);
+  }
+  25% {
+    text-shadow: -2px 0 rgba(0,255,255,0.5), 2px 0 rgba(255,0,0,0.5);
+  }
+  50% {
+    text-shadow: -5px 0 rgba(0,255,255,0.5), 3px 0 rgba(255,0,0,0.5);
+  }
+  100% {
+    text-shadow: 3px 0 rgba(0,255,255,0.5), 5px 0 rgba(255,0,0,0.5);
+  }
+}
+@-o-keyframes shake-it {
+  0% {
+    text-shadow: 0 0 rgba(0,255,255,0.5), 0 0 rgba(255,0,0,0.5);
+  }
+  25% {
+    text-shadow: -2px 0 rgba(0,255,255,0.5), 2px 0 rgba(255,0,0,0.5);
+  }
+  50% {
+    text-shadow: -5px 0 rgba(0,255,255,0.5), 3px 0 rgba(255,0,0,0.5);
+  }
+  100% {
+    text-shadow: 3px 0 rgba(0,255,255,0.5), 5px 0 rgba(255,0,0,0.5);
+  }
+}
+@keyframes shake-it {
+  0% {
+    text-shadow: 0 0 rgba(0,255,255,0.5), 0 0 rgba(255,0,0,0.5);
+  }
+  25% {
+    text-shadow: -2px 0 rgba(0,255,255,0.5), 2px 0 rgba(255,0,0,0.5);
+  }
+  50% {
+    text-shadow: -5px 0 rgba(0,255,255,0.5), 3px 0 rgba(255,0,0,0.5);
+  }
+  100% {
+    text-shadow: 3px 0 rgba(0,255,255,0.5), 5px 0 rgba(255,0,0,0.5);
+  }
+}
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */
@@ -450,11 +615,11 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: calc(100% - 20px);
+  width: 700px;
 }
 @media (min-width: 1200px) {
   .container .header-inner {
-    width: 1160px;
+    width: 900px;
   }
 }
 @media (min-width: 1600px) {
@@ -467,11 +632,11 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: 700px;
 }
 @media (min-width: 1200px) {
   .container .main-inner {
-    width: 1160px;
+    width: 900px;
   }
 }
 @media (min-width: 1600px) {
@@ -489,11 +654,11 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: calc(100% - 20px);
+  width: 700px;
 }
 @media (min-width: 1200px) {
   .container .footer-inner {
-    width: 1160px;
+    width: 900px;
   }
 }
 @media (min-width: 1600px) {
@@ -2137,7 +2302,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #21ffff;
+  background: #3e9322;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2803,11 +2968,11 @@ ul.breadcrumb li+li:last-child {
 .header {
   position: relative;
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: 700px;
 }
 @media (min-width: 1200px) {
   .header {
-    width: 1160px;
+    width: 900px;
   }
 }
 @media (min-width: 1600px) {
