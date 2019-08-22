@@ -181,7 +181,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/22/xxs-绕过总结/9.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/22/xxs-绕过总结/10.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/22/xxs-绕过总结/11.png">
-<meta property="og:updated_time" content="2019-08-22T04:11:14.270Z">
+<meta property="og:updated_time" content="2019-08-22T08:50:46.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xxs-绕过总结">
 <meta name="twitter:image" content="http://yoursite.com/2019/08/22/xxs-绕过总结/4b25dff9315d5fab052eb5f4b699bd79_3c9908abf073412d1a9f1b853cf33658.jpg">
@@ -509,7 +509,7 @@
                 
               
 
-              <time title="创建时间：2019-08-22 11:19:41 / 修改时间：12:11:14" itemprop="dateCreated datePublished" datetime="2019-08-22T11:19:41+08:00">2019-08-22</time>
+              <time title="创建时间：2019-08-22 11:19:41 / 修改时间：16:50:46" itemprop="dateCreated datePublished" datetime="2019-08-22T11:19:41+08:00">2019-08-22</time>
             
 
             
@@ -630,8 +630,8 @@
 <p><code>这是在圈子社区里发现的一篇文章，希望看到文章的人可以加入圈子社区！真的很赞</code></p>
 <p><a href="https://www.secquan.org/Discuss/1070130" target="_blank" rel="noopener">下次看不一定能点开，所以将内容总结一下</a><br>使用探测语句<br><code>&lt;img src=0&gt;</code><br><img src="/2019/08/22/xxs-绕过总结/2.png" alt="img"></p>
 <h2 id="通过burpsuite抓包测试"><a href="#通过burpsuite抓包测试" class="headerlink" title="通过burpsuite抓包测试"></a>通过burpsuite抓包测试</h2><p>编码后：</p>
-<p><code>%3Cimg+src%3D%22javascript%3Aalert(&#39;XSS&#39;)%22%3E</code></p>
-<p>编码前:<br><code>&lt;img src=&quot;javascript:alert(&#39;XSS&#39;)&quot;&gt;</code></p>
+<p><code>%3Cimg+src%3D%22javascript%3Aalert(&#39;XSS1&#39;)%22%3E</code></p>
+<p>编码前:<br><code>&lt;img src=&quot;javascript:alert(&#39;XSS2&#39;)&quot;&gt;</code></p>
 <h2 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h2><p>空格用+来表示吧 <code>&lt;img+src=0&gt;</code></p>
 <p>虽然是空的，但是发现源码中是存在img的但是被转义了，还是有些转机的^_^</p>
 <p>来尝试绕过转义<code>%00</code> 代替空格 <code>&lt;img%00src=0%00&gt;</code>  不行</p>
@@ -639,7 +639,7 @@
 <p>再使用 <code>&lt;img\/src=0&gt;</code></p>
 <p><img src="/2019/08/22/xxs-绕过总结/3.png" alt="img"></p>
 <p>有转机啊！可以看到 <code>/</code> 被转移成空格了</p>
-<h2 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h2><p>直接上 <code>&lt;img/src=0/onerror=alert(/xss/)&gt;</code></p>
+<h2 id="0x02"><a href="#0x02" class="headerlink" title="0x02"></a>0x02</h2><p>直接上 <code>&lt;img/src=0/onerror=alert(/xss3/)&gt;</code></p>
 <p><img src="/2019/08/22/xxs-绕过总结/4.png" alt="img"></p>
 <p>可惜，被拦截了，应该是关键字<code>alert</code>接触<code>()</code>就拦截，<code>onerror</code>接触<code>=</code>就拦截绕过一下，加空格和 <code>%00</code> 会被转义，试着用 <code>/</code> 来空格，<code>alert</code> 用 <code>top[&#39;alert&#39;]</code>来代替但是！不顶用啊</p>
 <h2 id="0x03"><a href="#0x03" class="headerlink" title="0x03"></a>0x03</h2><p>用过 <code>/**/ %00 大小写 eval 等</code> 常用的都被干掉了，结束了？！这不一定要用 <code>&lt;img&gt;</code> 啊，来试试 <code>&lt;iframe&gt;</code></p>
@@ -651,8 +651,7 @@
 <p>能写进去但是好像执行不了，继续绕</p>
 <h2 id="0x04"><a href="#0x04" class="headerlink" title="0x04"></a>0x04</h2><p>试了各种绕的方法，突然想到 <strong>明着不行，那就来暗的</strong></p>
 <p>明码不行，那就试试base64编码后的看看它会拦截不</p>
-<script>alert(/xss/)</script> 编码一下
-
+<script>alert(/xss4/)</script> 编码一下
 <p><img src="/2019/08/22/xxs-绕过总结/8.png" alt="img"></p>
 <p>来直接上Payload <code>&lt;iframe/src=data:text/html;base64,PHNjcmlwdD5hbGVydCgveHNzLyk8L3NjcmlwdD4=&gt;&lt;/iframe&gt;</code></p>
 <p><img src="/2019/08/22/xxs-绕过总结/9.png" alt="img"></p>
