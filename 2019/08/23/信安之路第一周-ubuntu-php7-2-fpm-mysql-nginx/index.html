@@ -183,6 +183,9 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1564724632265.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1564726731044.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565138662021.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565669443210.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565669721483.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565670265025.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565670956971.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1564918535673.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1566531389681.png">
@@ -193,7 +196,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1566541305367.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1566541974512.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1566542111628.png">
-<meta property="og:updated_time" content="2019-08-23T07:44:38.539Z">
+<meta property="og:updated_time" content="2019-08-29T07:07:52.945Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信安之路第一周-ubuntu+php7.2-fpm+mysql+nginx">
 <meta name="twitter:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1.jpg">
@@ -522,12 +525,24 @@
                 
               
 
-              <time title="创建时间：2019-08-23 14:54:21 / 修改时间：15:44:38" itemprop="dateCreated datePublished" datetime="2019-08-23T14:54:21+08:00">2019-08-23</time>
+              <time title="创建时间：2019-08-23 14:54:21" itemprop="dateCreated datePublished" datetime="2019-08-23T14:54:21+08:00">2019-08-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-29 15:07:52" itemprop="dateModified" datetime="2019-08-29T15:07:52+08:00">2019-08-29</time>
               
             
           </span>
@@ -600,7 +615,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">13k</span>
+                <span title="本文字数">12k</span>
               
 
               
@@ -614,7 +629,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">12 分钟</span>
+                <span title="阅读时长">11 分钟</span>
               
             </div>
           
@@ -721,13 +736,34 @@
 
    ![1565139179300](/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565139179300.png)
 
-          7. 若想切换到管理员只要输入`sudo su`然后输入密码即可</code></pre><ol start="2">
+7. 若想切换到管理员只要输入`sudo su`然后输入密码即可</code></pre><ol start="2">
 <li><p>配置</p>
 <ol>
 <li><p>配置之前我得诉一下苦，其实这是我第n次配置了，无数次的重装和更改，终于得以成功！所以赶紧记录一下（下面是根据一个表哥he写的）</p>
 </li>
 <li><p>安装php和phpFastCGI管理器 这里选择php7.2版本</p>
-<figure class="highlight plain"><figcaption><span>install php7.2 #安装php7.2```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">   `apt install php7.2-fpm #安装phpFastCGI管理器`</span><br><span class="line"></span><br><span class="line">3. nginx和php-fpm的连接方式有两种一种TCP,另一种socket的连接`网上很多都没有区分导致很多教程，直接是不联系，但是我总是以为说的是一种方式`*下面使用的都是socket连接*</span><br><span class="line"></span><br><span class="line">4. 修改php-fpm配置文件备份！备份！备份!</span><br><span class="line"></span><br><span class="line">   `vi /etc/php/7.2/fpm/pool.d/www.conf`</span><br><span class="line"></span><br><span class="line">   ![1565669443210](/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565669443210.png)</span><br><span class="line"></span><br><span class="line">5. 使用`php-fpm7.2 -t`     检查文件是否出错 （注释是用；号）</span><br><span class="line"></span><br><span class="line">   ![1565669721483](/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565669721483.png)</span><br><span class="line"></span><br><span class="line">6.  修改nginx的配置文件 `vi /etc/nginx/sites-enabled/default`这里需要注意的是配置文件是sites-enabled网上的很多教程是**sites-available**文件（**这两个文件夹使用来放虚拟主机配置的，**</span><br><span class="line"></span><br><span class="line">   **配置文件实体放在 /etc/nginx/sites-available 中，**</span><br><span class="line"></span><br><span class="line">   **在 /etc/nginx/sites-enabled 目录下有个虚拟链接指向 sites-available 中的实体文件。**网上的解释当然不是说放在sites-available不行，反正我是不行的！为此重装了多少次的nginx哎！）注释掉tcp链接</span><br><span class="line"></span><br><span class="line">7. 然后检查一下`nginx -t`这里需要注意的是在配置文件下的备份文件需要移走不然报错</span><br><span class="line"></span><br><span class="line">   ![1565670265025](/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565670265025.png)</span><br><span class="line"></span><br><span class="line">8. 在nginx的根目录创建文件index.php文件</span><br><span class="line"></span><br><span class="line">   `vi /var/www/html/index.php`</span><br><span class="line"></span><br><span class="line">   内容为下面</span><br><span class="line"></span><br><span class="line">   ``` php</span><br><span class="line">   &lt;?php</span><br><span class="line">   phpinfo();</span><br><span class="line">   ?&gt;</span><br></pre></td></tr></table></figure>
+<p><code>apt install php7.2 #安装php7.2</code><br><code>apt install php7.2-fpm #安装phpFastCGI管理器</code></p>
+</li>
+<li><p>nginx和php-fpm的连接方式有两种一种TCP,另一种socket的连接<code>网上很多都没有区分导致很多教程，直接是不联系，但是我总是以为说的是一种方式</code><em>下面使用的都是socket连接</em></p>
+</li>
+<li><p>修改php-fpm配置文件备份！备份！备份!</p>
+<p><code>vi /etc/php/7.2/fpm/pool.d/www.conf</code></p>
+<p><img src="/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565669443210.png" alt="1565669443210"></p>
+</li>
+<li><p>使用<code>php-fpm7.2 -t</code>     检查文件是否出错 （注释是用；号）</p>
+<p><img src="/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565669721483.png" alt="1565669721483"></p>
+</li>
+<li><p>修改nginx的配置文件 <code>vi /etc/nginx/sites-enabled/default</code>这里需要注意的是配置文件是sites-enabled网上的很多教程是<strong>sites-available</strong>文件（<strong>这两个文件夹使用来放虚拟主机配置的，</strong></p>
+<p><strong>配置文件实体放在 /etc/nginx/sites-available 中，</strong></p>
+<p><strong>在 /etc/nginx/sites-enabled 目录下有个虚拟链接指向 sites-available 中的实体文件。</strong>网上的解释当然不是说放在sites-available不行，反正我是不行的！为此重装了多少次的nginx哎！）注释掉tcp链接</p>
+</li>
+<li><p>然后检查一下<code>nginx -t</code>这里需要注意的是在配置文件下的备份文件需要移走不然报错</p>
+<p><img src="/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565670265025.png" alt="1565670265025"></p>
+</li>
+<li><p>在nginx的根目录创建文件index.php文件</p>
+<p><code>vi /var/www/html/index.php</code></p>
+<p>内容为下面</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">phpinfo();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>测试发现还是有问题我的是502报错，这个由于找不到php-fpm.sock的原因，因为<code>php5.3之后的版本，php-fpm.conf里的listen的默认配置是127.0.0.1:9000，就不会生成php-fpm.sock，因此如果需要Nginx里的配置有链接tmp/php-fpm.sock的话，需要将listen的地址配置成和nginx的配置文件一致，同时保证这个路径已经存在，这样在启动./php-fpm的时候，会在对应路径上自动生成php-fpm.sock</code></p>
 <p>配置完成后输入以下命令，这样配置好后，就会在/var/run/php-fpm/目录下自动生成一个php5-fpm.sock文件，然后一切OK。</p>
@@ -1212,7 +1248,7 @@ setInterval("createtime()",250);
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">18k</span>
+    <span title="站点总字数">19k</span>
   
 
   
