@@ -183,7 +183,6 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1564724632265.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1564726731044.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565138662021.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565138867082.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565139179300.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565669443210.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565669721483.png">
@@ -198,7 +197,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1566541305367.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1566541974512.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1566542111628.png">
-<meta property="og:updated_time" content="2019-08-29T09:49:59.382Z">
+<meta property="og:updated_time" content="2019-08-30T07:32:59.769Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信安之路第一周-ubuntu+php7.2-fpm+mysql+nginx">
 <meta name="twitter:image" content="http://yoursite.com/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1.jpg">
@@ -544,7 +543,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-29 17:49:59" itemprop="dateModified" datetime="2019-08-29T17:49:59+08:00">2019-08-29</time>
+                <time title="修改时间：2019-08-30 15:32:59" itemprop="dateModified" datetime="2019-08-30T15:32:59+08:00">2019-08-30</time>
               
             
           </span>
@@ -726,9 +725,10 @@
 </li>
 <li><p>查看ssh服务已启动：<code>ps -e |  grep  ssh</code></p>
 </li>
-<li><p>修改配置文件： <code>sudo vi /etc/ssh/ssh_config</code> 修改一下文件，并把注释“#”去掉。</p>
+<li><p>修改配置文件： <code>sudo vi /etc/ssh/sshd_config</code> 修改一下文件，并把注释“#”去掉。</p>
 <p><img src="/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565138662021.png" alt="1565138662021"></p>
-<p><img src="/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565138867082.png" alt="1565138867082"></p>
+</li>
+<li><p>修改其实还没完，因为还是会提示连接Linux服务器提示拒绝密码。这是最奔溃，后来找到半天才找到原因！<code>就是下面图的大小写，因为我的虚拟机的用户名是Temple</code>，所以我一直用这个作为 user name，有时间就是差这点点，但是解决后那种快乐真的让人很开心</p>
 <p><img src="/2019/08/23/信安之路第一周-ubuntu-php7-2-fpm-mysql-nginx/1565139179300.png" alt="1565139179300"></p>
 </li>
 <li><p>若想切换到管理员只要输入<code>sudo su</code>然后输入密码即可</p>
@@ -928,6 +928,10 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/09/02/内网渗透测试基础知识/" rel="prev" title="内网渗透测试基础知识">
+                 <i class="fa fa-chevron-left"></i> 内网渗透测试基础知识
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
@@ -1037,7 +1041,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1064,7 +1070,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1246,7 +1254,7 @@ setInterval("createtime()",250);
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">19k</span>
+    <span title="站点总字数">12k</span>
   
 
   
@@ -1255,7 +1263,7 @@ setInterval("createtime()",250);
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">17 分钟</span>
+    <span title="站点阅读时长">11 分钟</span>
   
 </div>
 
@@ -1866,7 +1874,7 @@ setInterval("createtime()",250);
 
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":350},"mobile":{"show":true},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
