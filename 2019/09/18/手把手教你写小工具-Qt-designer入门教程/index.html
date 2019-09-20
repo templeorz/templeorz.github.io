@@ -185,11 +185,13 @@
 <meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568787536493.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568788863034.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568788838976.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568789174015.png">
-<meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568789229665.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568941601024.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568941994559.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568789454714.png">
 <meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568789981939.png">
-<meta property="og:updated_time" content="2019-09-19T01:26:43.039Z">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568942732864.png">
+<meta property="og:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568944163773.png">
+<meta property="og:updated_time" content="2019-09-20T02:01:48.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手把手教你写小工具-Qt_designer入门教程">
 <meta name="twitter:image" content="http://yoursite.com/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568777433.jpg">
@@ -535,7 +537,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-19 09:26:43" itemprop="dateModified" datetime="2019-09-19T09:26:43+08:00">2019-09-19</time>
+                <time title="修改时间：2019-09-20 10:01:48" itemprop="dateModified" datetime="2019-09-20T10:01:48+08:00">2019-09-20</time>
               
             
           </span>
@@ -608,7 +610,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">8.3k</span>
+                <span title="本文字数">11k</span>
               
 
               
@@ -622,7 +624,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">8 分钟</span>
+                <span title="阅读时长">10 分钟</span>
               
             </div>
           
@@ -804,14 +806,37 @@
 <p><img src="/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568788838976.png" alt="1568788838976"></p>
 <p>改完代码后可以输入命令验证一下，能弹出窗口就行</p>
 <p><code>python3 test.py</code></p>
-<p><img src="/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568789174015.png" alt="1568789174015"></p>
+<p>验证完成后，进行最后一步打包</p>
+<p><img src="/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568941601024.png" alt="1568941601024"></p>
+<blockquote>
+<p>上图第一个红框中需要写<code>pyinstaller.exe</code>存放路径，第二个红框需要指定你要放在封面的图标文件（若不在路径下输入命令，需要指定绝对路径），最后一个就是我们需要打包的py文件了。</p>
+<blockquote>
+<p>注意一下：必须是先图标后py脚本，顺序不能错</p>
+</blockquote>
+</blockquote>
 <p><code>执行一半360会报毒，直接允许程序操作就行</code>当然不提示就更好，你会提示成功了</p>
-<p><img src="/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568789229665.png" alt="1568789229665"></p>
+<p><img src="/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568941994559.png" alt="1568941994559"></p>
 <p>然后回到文件夹中，程序在<code>dist</code>中</p>
 <p><img src="/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568789454714.png" alt="1568789454714"></p>
-<p>然后直接点击就行</p>
+<p>然后直接点击就行，会先出现命令行，然后就会弹出窗口！若想直接弹出窗口直接输入</p>
+<p><code>D:\python3.6.5\Scripts\pyinstaller.exe -F -w -i 12.ico test.py</code></p>
+<p>我拿我自己命令举例</p>
 <p><img src="/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568789981939.png" alt="1568789981939"></p>
 <p>fengx大佬的牛逼</p>
+<h2 id="0x05"><a href="#0x05" class="headerlink" title="0x05"></a>0x05</h2><h3 id="报错解决ImportError-unable-to-find-Qt5Core-dll-on-PATH"><a href="#报错解决ImportError-unable-to-find-Qt5Core-dll-on-PATH" class="headerlink" title="报错解决ImportError: unable to find Qt5Core.dll on PATH"></a>报错解决ImportError: unable to find Qt5Core.dll on PATH</h3><p>当然也不都是顺风顺水，对我来说每次肯定要出点幺蛾子！</p>
+<p>最后一步打包的时候弹框出<code>Failed to execute script</code></p>
+<p><img src="/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568942732864.png" alt="1568942732864"></p>
+<p>然后截图发现</p>
+<p><img src="/2019/09/18/手把手教你写小工具-Qt-designer入门教程/1568944163773.png" alt="1568944163773"></p>
+<p>因为我脑子有点笨笨的！所以找了一天的时间才找到<a href="https://blog.csdn.net/zwyact/article/details/99778898" target="_blank" rel="noopener">解决方案</a></p>
+<p><code>ImportError: unable to find Qt5Core.dll on PATH</code></p>
+<blockquote>
+<p>总的来说呢，就是有的版本pyqt5库对系统变量的加载存在bug，具体原因只有官方才能解释了，咱也没法管了，对有bug的版本库提供一种办法就是，在主程序中pyqt5库import之前就对系统变量进行手动设置，import代码如下：</p>
+</blockquote>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys, <span class="built_in">os</span></span><br><span class="line"><span class="keyword">if</span> hasattr(sys, <span class="string">'frozen'</span>):</span><br><span class="line">    <span class="built_in">os</span>.environ[<span class="string">'PATH'</span>] = sys._MEIPASS + <span class="string">";"</span> + <span class="built_in">os</span>.environ[<span class="string">'PATH'</span>]</span><br><span class="line"><span class="keyword">from</span> PyQt5 <span class="keyword">import</span> QtCore, QtWidgets, QtGui</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtWidgets <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> untitled <span class="keyword">import</span> Ui_MainWindow</span><br><span class="line"><span class="keyword">from</span> PyQt5.QtGui <span class="keyword">import</span> *</span><br></pre></td></tr></table></figure>
+
+<p>因为我的是在一个文件里所以删除了<code>from untitled import Ui_MainWindow</code>其他没变，最后点击程序就可以完美执行了！</p>
+<p><strong>我只想说：太南了</strong></p>
 <p>参考链接</p>
 <p><a href="https://blog.csdn.net/pipisorry/article/details/45999965" target="_blank" rel="noopener">https://blog.csdn.net/pipisorry/article/details/45999965</a></p>
 <p><a href="https://www.jianshu.com/p/5b063c5745d0" target="_blank" rel="noopener">https://www.jianshu.com/p/5b063c5745d0</a></p>
@@ -1130,7 +1155,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01"><span class="nav-number">1.</span> <span class="nav-text">0x01</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">1.1.</span> <span class="nav-text">环境准备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02"><span class="nav-number">2.</span> <span class="nav-text">0x02</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Qt-Designer使用介绍"><span class="nav-number">2.1.</span> <span class="nav-text">Qt Designer使用介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#预览窗口"><span class="nav-number">2.1.1.</span> <span class="nav-text">预览窗口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#窗口布局Layouts"><span class="nav-number">2.1.2.</span> <span class="nav-text">窗口布局Layouts</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03"><span class="nav-number">3.</span> <span class="nav-text">0x03</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UI文件转化为py文件"><span class="nav-number">3.1.</span> <span class="nav-text">UI文件转化为py文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pyuic5工具使用"><span class="nav-number">3.1.1.</span> <span class="nav-text">pyuic5工具使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04"><span class="nav-number">4.</span> <span class="nav-text">0x04</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pyinstaller安装"><span class="nav-number">4.1.</span> <span class="nav-text">pyinstaller安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#py文件转换为exe文件"><span class="nav-number">4.2.</span> <span class="nav-text">py文件转换为exe文件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01"><span class="nav-number">1.</span> <span class="nav-text">0x01</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">1.1.</span> <span class="nav-text">环境准备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02"><span class="nav-number">2.</span> <span class="nav-text">0x02</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Qt-Designer使用介绍"><span class="nav-number">2.1.</span> <span class="nav-text">Qt Designer使用介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#预览窗口"><span class="nav-number">2.1.1.</span> <span class="nav-text">预览窗口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#窗口布局Layouts"><span class="nav-number">2.1.2.</span> <span class="nav-text">窗口布局Layouts</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03"><span class="nav-number">3.</span> <span class="nav-text">0x03</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UI文件转化为py文件"><span class="nav-number">3.1.</span> <span class="nav-text">UI文件转化为py文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pyuic5工具使用"><span class="nav-number">3.1.1.</span> <span class="nav-text">pyuic5工具使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04"><span class="nav-number">4.</span> <span class="nav-text">0x04</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pyinstaller安装"><span class="nav-number">4.1.</span> <span class="nav-text">pyinstaller安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#py文件转换为exe文件"><span class="nav-number">4.2.</span> <span class="nav-text">py文件转换为exe文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x05"><span class="nav-number">5.</span> <span class="nav-text">0x05</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#报错解决ImportError-unable-to-find-Qt5Core-dll-on-PATH"><span class="nav-number">5.1.</span> <span class="nav-text">报错解决ImportError: unable to find Qt5Core.dll on PATH</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1219,7 +1244,7 @@ setInterval("createtime()",250);
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">18k</span>
+    <span title="站点总字数">19k</span>
   
 
   
